@@ -1,0 +1,27 @@
+.container{
+	margin: 50px;
+}
+
+.racer_table td {
+  height: 50px;
+  width: 50px;
+  border: 5px solid #666;
+  border-radius: 15px;
+}
+
+#player1{
+	background: #C65269;
+}
+
+#player2{
+	background: #B3D6D8;
+}
+
+.racer_table td.active {
+  background-color: #D1C772;
+  color: blue;
+}
+
+.racer_table tr{
+	color: white;
+}
