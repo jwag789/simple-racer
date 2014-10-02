@@ -25,3 +25,7 @@
 .racer_table tr{
 	color: white;
 }
+
+.reset {
+  display: none;
+}

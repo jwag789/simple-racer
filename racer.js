@@ -9,7 +9,9 @@ var updatePlayerPosition = function(player, position){
 
 var checkWinner = function(player){
   if ($('#player' + player + ' td:last-child').hasClass("active")){
+    $(".winner").html("<h2>Player " + player + " wins!</h2>")
     game = false;
+    $(".reset").show();
   }
 }
 
@@ -17,7 +19,7 @@ $(document).ready(function(){
 
   $(document).on('keyup', function(event){
     if (game===true){
-      
+
       if(event.keyCode==81){
         updatePlayerPosition(1, playerOnePos);
         checkWinner(1);
