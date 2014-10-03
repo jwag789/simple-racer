@@ -29,7 +29,7 @@ body {
 #player1score {
   background: white;
   border-radius: 50px 0 0 50px;
-  opacity: 0.8;
+  opacity: 0.9;
   list-style-type: none;
   width: 100px;
   height: 35px;
@@ -42,7 +42,7 @@ body {
 
 #player2score {
   background: white;
-  opacity: 0.8;
+  opacity: 0.9;
   border-radius: 0 50px 50px 0;
   list-style-type: none;
   width: 100px;
