@@ -1,5 +1,5 @@
 body {
-  color: white;
+  color: black;
   background: url(http://images2.layoutsparks.com/1/207533/easter-surprise-serene-scenery.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -8,14 +8,66 @@ body {
 }
 
 .container{
-	/*margin: 50px;*/
-  
+	margin: 30px;
+  margin-top: 60px;
  
 }
 
+.scoreboard {
+  font-family: 'Changa One', cursive, sans-serif;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.scoreboard p {
+  margin: 0px;
+
+}
+
+#player1score {
+  background: white;
+  border-radius: 50px 0 0 50px;
+  opacity: 0.8;
+  list-style-type: none;
+  width: 100px;
+  height: 35px;
+  display: inline-block;
+  text-align: center;
+  padding: 20px;
+  margin: 0px;
+  border:5px solid #999;
+}
+
+#player2score {
+  background: white;
+  opacity: 0.8;
+  border-radius: 0 50px 50px 0;
+  list-style-type: none;
+  width: 100px;
+  height: 35px;
+  display: inline-block;
+  text-align: center;
+  padding: 20px;
+  margin: 0px;
+  border:5px solid #999;
+}
+
+header {
+  color: #D11E06;
+  background: #4F0000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  font-family: 'Nixie One', cursive, sans-serif;
+  font-size: 1.2em;
+}
+
 .racer_table td {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
 }
 
 .racer_table td.active {
@@ -29,7 +81,7 @@ body {
 
 #player1 td.active{
   background: url(Mew.png);
-  background-size: 160px;
+  background-size: 130px;
   background-repeat: no-repeat;
 }
 
@@ -39,6 +91,32 @@ body {
   background-repeat: no-repeat;
 }
 
-.reset {
+/*.reset {
   display: none;
+  text-align: center;
+}*/
+
+.winner {
+  text-align: center;
+  font-family: 'Changa One', cursive, sans-serif;
+  font-size: 1.6em;
+  text-shadow: 5px 5px 10px white;
+}
+
+button.reset {
+  font-family: 'Changa One', cursive, sans-serif;
+  font-size: 1.2em;
+  display: none;
+  text-align: center;
+  margin-left: 45%;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+
+  transition:.5s;
+}
+
+button.reset:hover {
+  background: #999;
 }

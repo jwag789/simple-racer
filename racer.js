@@ -21,6 +21,7 @@ function Player(element_id, name){
   this.check = function(){
     if ($(this.el + ' td:last-child').hasClass("active")){
       this.score += 1;
+      $(this.el + "score > p:first-child").html(this.name + ": " + this.score)
       $(".winner").html("<h2>" + this.name + " wins!</h2>")
       game = false;
       $(".reset").show();

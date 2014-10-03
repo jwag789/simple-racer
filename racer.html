@@ -5,25 +5,22 @@
 
 	<link rel="stylesheet" type="text/css" href="normalize.css">
 	<link rel="stylesheet" type="text/css" href="racer.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Nixie+One|Changa+One' rel='stylesheet' type='text/css'>
+	<script src="jquery-2.1.1.min.js"></script>
 	<script src="racer.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 
 </head>
 
 <body>
-
+	<header>
+		<p>Pokemon Racing</p>
+	</header>
 	<div class="container" ng-app="" ng-controller="scoreController">
 
-		<h1>A Day at the Races</h1>
-
-		<ol>
-			<li ng-model="score_one">Mew: {{ score_one }}</li>
-			<li ng-model="score_two">Celebi: {{ score_two }}</li>
-		</ol>
-
-		<p>Mew: Press Q</p>
-		<p>Celebi: Press P</p>
+		<div class="scoreboard">
+			<div id="player1score"><p>Mew: 0</p><p>Press Q</p></div><div id="player2score"><p>Celebi: 0</p><p>Press P</p></div>
+		</div>
+	
 
 		<table class="racer_table">
 			<tr id="player1">
