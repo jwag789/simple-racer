@@ -1,14 +1,4 @@
-// var playerOnePos = 1;
-// var playerTwoPos = 1;
-// var playerOneScore = 0;
-// var playerTwoScore = 0;
 var game = true;
-
-
-// var updatePlayerPosition = function(player, position){
-//   $('#player' + player + ' td').removeClass('active');
-//   $('#player' + player + ' td:eq(' + (position) + ')').addClass("active");
-// }
 
 var checkWinner = function(player){
   if ($('#player' + player + ' td:last-child').hasClass("active")){
