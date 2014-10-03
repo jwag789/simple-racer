@@ -1,20 +1,21 @@
+body {
+  color: white;
+  background: url(http://images2.layoutsparks.com/1/207533/easter-surprise-serene-scenery.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .container{
-	margin: 50px;
+	/*margin: 50px;*/
+  
+ 
 }
 
 .racer_table td {
-  height: 50px;
-  width: 50px;
-  border: 5px solid #666;
-  border-radius: 15px;
-}
-
-#player1{
-	background: #C65269;
-}
-
-#player2{
-	background: #B3D6D8;
+  height: 200px;
+  width: 200px;
 }
 
 .racer_table td.active {
@@ -27,11 +28,15 @@
 }
 
 #player1 td.active{
-  background: url(http://puu.sh/bWZqo/afc3df99d4.png);
+  background: url(Mew.png);
+  background-size: 160px;
+  background-repeat: no-repeat;
 }
 
 #player2 td.active{
-  background: url(http://puu.sh/bWZsA/b2cfee3b74.png);
+  background: url(Celebi.png);
+  background-size: 130px;
+  background-repeat: no-repeat;
 }
 
 .reset {

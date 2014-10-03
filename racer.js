@@ -1,13 +1,5 @@
 var game = true;
 
-var checkWinner = function(player){
-  if ($('#player' + player + ' td:last-child').hasClass("active")){
-    $(".winner").html("<h2>Player " + player + " wins!</h2>")
-    game = false;
-    $(".reset").show();
-  }
-}
-
 var resetGame = function(){
   $('td').removeClass('active');
   $('td:first-child').addClass('active');
@@ -23,11 +15,12 @@ player2 = new Player('#player2', 'Celebi');
 
 function Player(element_id, name){
   this.el = $(element_id).selector;
-  this.position = 0;
+  this.position = 1;
   this.name = name;
+  this.score = 0;
   this.check = function(){
     if ($(this.el + ' td:last-child').hasClass("active")){
-      console.log("checked");
+      this.score += 1;
       $(".winner").html("<h2>" + this.name + " wins!</h2>")
       game = false;
       $(".reset").show();
@@ -39,6 +32,11 @@ function Player(element_id, name){
     this.check();
     this.position += 1;
   }
+}
+
+function scoreController($scope){
+  $scope.score_one = player1.score;
+  $scope.score_two = player2.score;
 }
 
 $(document).ready(function(){

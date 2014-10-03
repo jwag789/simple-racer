@@ -7,19 +7,23 @@
 	<link rel="stylesheet" type="text/css" href="racer.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="racer.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 
 </head>
 
 <body>
 
-	<div class="container">
+	<div class="container" ng-app="" ng-controller="scoreController">
 
 		<h1>A Day at the Races</h1>
 
 		<ol>
-			<li>Mew: 0</li>
-			<li>Celebi: 0</li>
+			<li ng-model="score_one">Mew: {{ score_one }}</li>
+			<li ng-model="score_two">Celebi: {{ score_two }}</li>
 		</ol>
+
+		<p>Mew: Press Q</p>
+		<p>Celebi: Press P</p>
 
 		<table class="racer_table">
 			<tr id="player1">
