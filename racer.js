@@ -1,14 +1,14 @@
-var playerOnePos = 1;
-var playerTwoPos = 1;
-var playerOneScore = 0;
-var playerTwoScore = 0;
+// var playerOnePos = 1;
+// var playerTwoPos = 1;
+// var playerOneScore = 0;
+// var playerTwoScore = 0;
 var game = true;
 
 
-var updatePlayerPosition = function(player, position){
-  $('#player' + player + ' td').removeClass('active');
-  $('#player' + player + ' td:eq(' + (position) + ')').addClass("active");
-}
+// var updatePlayerPosition = function(player, position){
+//   $('#player' + player + ' td').removeClass('active');
+//   $('#player' + player + ' td:eq(' + (position) + ')').addClass("active");
+// }
 
 var checkWinner = function(player){
   if ($('#player' + player + ' td:last-child').hasClass("active")){
@@ -24,8 +24,20 @@ var resetGame = function(){
   $('.winner').html("");
   $('button').hide();
   game = true;
-  playerOnePos = 1;
-  playerTwoPos = 1;
+  player1.position = 1;
+  player2.position = 1;
+}
+
+player1 = new Player('#player1');
+player2 = new Player('#player2');
+
+function Player(element_id){
+  this.el = $(element_id).selector;
+  this.position = 0;
+  this.move = function(position){
+    $(this.el + ' td').removeClass('active');
+    $(this.el + ' td:eq(' + (this.position) + ')').addClass("active");
+  }
 }
 
 $(document).ready(function(){
@@ -34,15 +46,15 @@ $(document).ready(function(){
     if (game===true){
 
       if(event.keyCode==81){
-        updatePlayerPosition(1, playerOnePos);
+        player1.move(player1.position);
         checkWinner(1);
-        playerOnePos += 1;
+        player1.position += 1;
       }
 
       if(event.keyCode==80){
-        updatePlayerPosition(2, playerTwoPos);
+        player2.move(player2.position);
         checkWinner(2);
-        playerTwoPos += 1;
+        player2.position += 1;
       }
     }
     
