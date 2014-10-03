@@ -26,6 +26,14 @@
 	color: white;
 }
 
+#player1 td.active{
+  background: url(http://puu.sh/bWZqo/afc3df99d4.png);
+}
+
+#player2 td.active{
+  background: url(http://puu.sh/bWZsA/b2cfee3b74.png);
+}
+
 .reset {
   display: none;
 }
