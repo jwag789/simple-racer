@@ -37,6 +37,7 @@ function Player(element_id, name){
     $(this.el + ' td').removeClass('active');
     $(this.el + ' td:eq(' + (this.position) + ')').addClass("active");
     this.check();
+    this.position += 1;
   }
 }
 
@@ -47,14 +48,10 @@ $(document).ready(function(){
 
       if(event.keyCode==81){
         player1.move(player1.position);
-        // checkWinner(1);
-        player1.position += 1;
       }
 
       if(event.keyCode==80){
         player2.move(player2.position);
-        // checkWinner(2);
-        player2.position += 1;
       }
     }
     
