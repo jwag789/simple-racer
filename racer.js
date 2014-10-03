@@ -1,6 +1,9 @@
 var playerOnePos = 1;
 var playerTwoPos = 1;
+var playerOneScore = 0;
+var playerTwoScore = 0;
 var game = true;
+
 
 var updatePlayerPosition = function(player, position){
   $('#player' + player + ' td').removeClass('active');
@@ -13,6 +16,16 @@ var checkWinner = function(player){
     game = false;
     $(".reset").show();
   }
+}
+
+var resetGame = function(){
+  $('td').removeClass('active');
+  $('td:first-child').addClass('active');
+  $('.winner').html("");
+  $('button').hide();
+  game = true;
+  playerOnePos = 1;
+  playerTwoPos = 1;
 }
 
 $(document).ready(function(){
@@ -34,5 +47,7 @@ $(document).ready(function(){
     }
     
   })
+
+  $('button').on('click', resetGame)
 
 })
