@@ -28,15 +28,25 @@ var resetGame = function(){
   player2.position = 1;
 }
 
-player1 = new Player('#player1');
-player2 = new Player('#player2');
+player1 = new Player('#player1', 'Mew');
+player2 = new Player('#player2', 'Celebi');
 
-function Player(element_id){
+function Player(element_id, name){
   this.el = $(element_id).selector;
   this.position = 0;
+  this.name = name;
+  this.check = function(){
+    if ($(this.el + ' td:last-child').hasClass("active")){
+      console.log("checked");
+      $(".winner").html("<h2>" + this.name + " wins!</h2>")
+      game = false;
+      $(".reset").show();
+    }
+  }
   this.move = function(position){
     $(this.el + ' td').removeClass('active');
     $(this.el + ' td:eq(' + (this.position) + ')').addClass("active");
+    this.check();
   }
 }
 
@@ -47,13 +57,13 @@ $(document).ready(function(){
 
       if(event.keyCode==81){
         player1.move(player1.position);
-        checkWinner(1);
+        // checkWinner(1);
         player1.position += 1;
       }
 
       if(event.keyCode==80){
         player2.move(player2.position);
-        checkWinner(2);
+        // checkWinner(2);
         player2.position += 1;
       }
     }
